@@ -1,0 +1,11 @@
+.link {
+  display: block;
+  width: 250px;
+  height: 50px;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

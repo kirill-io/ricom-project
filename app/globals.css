@@ -7,4 +7,6 @@
 body {
   margin: 0;
   font-family: var(--font-roboto), "Open Sans", sans-serif;
+  color: white;
+  background: black;
 }

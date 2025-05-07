@@ -1,4 +1,10 @@
 :root {
-  --background: #fff;
-  --foreground: #171717;
+  --color-primary: #fff;
+  --color-secondary: #344045;
+  --color-tertiary: #035ea8;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-roboto), "Open Sans", sans-serif;
 }

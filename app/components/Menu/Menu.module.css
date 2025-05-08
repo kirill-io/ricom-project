@@ -6,7 +6,7 @@
   justify-content: center;
 
   width: 100%;
-  min-height: 40px;
+  min-height: 35px;
 }
 
 .list {
@@ -31,8 +31,8 @@
   right: 0;
   transform: translateY(-50%);
 
-  width: 49px;
-  height: 40px;
+  width: 43px;
+  height: 35px;
 }
 
 .link {

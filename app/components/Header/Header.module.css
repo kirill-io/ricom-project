@@ -1,5 +1,6 @@
 .header {
   position: absolute;
+  z-index: 100;
   inset: 0 0 auto;
 
   display: flex;
@@ -28,4 +29,10 @@
 .partners {
   display: flex;
   gap: 30px;
+}
+
+@media screen and (max-width: 1740px) {
+  .container {
+    width: 92%;
+  }
 }

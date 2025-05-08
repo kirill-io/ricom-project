@@ -12,28 +12,41 @@ export const Logo = ({ type }: LogoProps): JSX.Element => {
   const selectionLogo = (type: LogoType) => {
     switch (type) {
       case LogoType.PRIMARY:
-        return <LogoPrimaryImage className={styles.image} />;
+        return (
+          <Link href="/" className={classNames(styles.link, styles.logo)}>
+            <LogoPrimaryImage className={styles.image} />
+          </Link>
+        );
       case LogoType.SECONDARY:
-        return <LogoSecondaryImage className={styles.image} />;
+        return (
+          <Link href="/" className={classNames(styles.link, styles.logo)}>
+            <LogoSecondaryImage className={styles.image} />
+          </Link>
+        );
       case LogoType.SKOLKOVO:
-        return <LogoSkImage className={styles.image} />;
+        return (
+          <Link
+            href="https://www.sk.ru/"
+            className={classNames(styles.link, styles.skolkovo)}
+            target="_blank"
+          >
+            <LogoSkImage className={styles.image} />
+          </Link>
+        );
       case LogoType.KUZTECH:
-        return <LogoKtImage className={styles.image} />;
+        return (
+          <Link
+            href="https://technopark42.ru/"
+            className={classNames(styles.link, styles.kuztech)}
+            target="_blank"
+          >
+            <LogoKtImage className={styles.image} />
+          </Link>
+        );
       default:
         return <></>;
     }
   };
 
-  return (
-    <Link
-      href="/"
-      className={classNames(styles.link, {
-        [styles.logo]: type === LogoType.PRIMARY || type === LogoType.SECONDARY,
-        [styles.skolkovo]: type === LogoType.SKOLKOVO,
-        [styles.kuztech]: type === LogoType.KUZTECH,
-      })}
-    >
-      {selectionLogo(type)}
-    </Link>
-  );
+  return selectionLogo(type);
 };

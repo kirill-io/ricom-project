@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Menu.module.css";
-import СartImage from "./cart-icon.svg";
+import СartImage from "./images/cart-icon.svg";
 
 export const Menu = () => {
   return (

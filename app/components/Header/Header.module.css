@@ -6,7 +6,7 @@
   justify-content: center;
 
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0 12px;
 
   background: rgb(255 255 255 / 70%);
 }
@@ -14,7 +14,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 
   width: 100%;
   max-width: 1600px;

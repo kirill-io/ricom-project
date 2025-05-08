@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import { Logo } from "../Logo/Logo";
 import { LogoType } from "../Logo/Logo.props";
 import { Menu } from "../Menu/Menu";
+import { Contacts } from "../Contacts/Contacts";
 
 export const Header = (): JSX.Element => {
   return (
@@ -18,7 +19,9 @@ export const Header = (): JSX.Element => {
         <div className={styles.menuRow}>
           <Menu />
         </div>
-        <div className={styles.row}></div>
+        <div className={styles.contactsRow}>
+          <Contacts />
+        </div>
       </div>
     </header>
   );

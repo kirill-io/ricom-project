@@ -1,0 +1,30 @@
+.header {
+  position: absolute;
+  inset: 0 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  padding: 20px 0;
+
+  background: rgb(255 255 255 / 70%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logoRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.partners {
+  display: flex;
+  gap: 30px;
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { roboto } from "./fonts/fonts";
 import "./globals.css";
+import { Header } from "./components/Header/Header";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
@@ -36,7 +37,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <meta name="copyright" content="РИКОМ, 2025" />
       </head>
-      <body className={roboto.variable}>{children}</body>
+      <body className={roboto.variable}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

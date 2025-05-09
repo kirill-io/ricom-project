@@ -6,7 +6,27 @@ import { images, item } from "./Hero.data";
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [initialHeight, setInitialHeight] = useState("100vh");
   const slideDuration = 7000;
+
+  const updateHeight = () => {
+    if (window.innerWidth <= 1279) {
+      setInitialHeight(`${window.innerHeight}px`);
+    } else {
+      setInitialHeight("100vh");
+    }
+  };
+
+  useEffect(() => {
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    window.addEventListener("orientationchange", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("orientationchange", updateHeight);
+    };
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,7 +39,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} style={{ height: initialHeight }}>
       {images.map((image, index) => (
         <div
           key={index}

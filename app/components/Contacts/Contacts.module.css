@@ -63,3 +63,16 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .list {
+    gap: 20px;
+    justify-content: start;
+    font-size: 22px;
+  }
+
+  .item:has(.image) {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { roboto } from "./fonts/fonts";
 import "./globals.css";
 import { Header } from "./components/Header/Header";
+import { Loader } from "./Loader";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <meta name="copyright" content="РИКОМ, 2025" />
       </head>
       <body className={roboto.variable}>
+        <Loader />
         <Header />
         {children}
       </body>

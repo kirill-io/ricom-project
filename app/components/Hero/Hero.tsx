@@ -27,21 +27,14 @@ export const Hero = () => {
             index === currentIndex ? styles.activeSlide : ""
           }`}
         >
-          <picture>
-            <source
-              srcSet={`${image.webp} 1x, ${image.webp2x} 2x`}
-              type="image/webp"
-            />
-            <source
-              srcSet={`${image.jpg} 1x, ${image.jpg2x} 2x`}
-              type="image/jpeg"
-            />
-            <Image
-              src={image.jpg}
-              alt={`Slide ${index + 1}`}
-              className={styles.image}
-            />
-          </picture>
+          <Image
+            src={image}
+            alt={`Слайд ${index + 1}`}
+            className={styles.image}
+            priority={index === 0}
+            width={2560}
+            height={1440}
+          />
         </div>
       ))}
       <div className={styles.overlay} />

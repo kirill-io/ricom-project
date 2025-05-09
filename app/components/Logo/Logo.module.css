@@ -39,3 +39,20 @@
     height: 30px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 173px;
+    height: 35px;
+  }
+
+  .skolkovo {
+    width: 126px;
+    height: 35px;
+  }
+
+  .kuztech {
+    width: 61px;
+    height: 35px;
+  }
+}

@@ -1,31 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import styles from "./Hero.module.css";
-import { images, item } from "./Hero.data";
+import { images, items } from "./Hero.data";
+import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [initialHeight, setInitialHeight] = useState("100vh");
   const slideDuration = 7000;
-
-  const updateHeight = () => {
-    if (window.innerWidth <= 1279) {
-      setInitialHeight(`${window.innerHeight}px`);
-    } else {
-      setInitialHeight("100vh");
-    }
-  };
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
-    window.addEventListener("orientationchange", updateHeight);
-
-    return () => {
-      window.removeEventListener("resize", updateHeight);
-      window.removeEventListener("orientationchange", updateHeight);
-    };
+    setIsMounted(true);
   }, []);
 
   useEffect(() => {
@@ -38,8 +23,13 @@ export const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  if (!isMounted) {
+    // На сервере ничего не рендерим — предотвращаем ошибку
+    return null;
+  }
+
   return (
-    <section className={styles.hero} style={{ height: initialHeight }}>
+    <section className={styles.hero}>
       {images.map((image, index) => (
         <div
           key={index}
@@ -47,13 +37,14 @@ export const Hero = () => {
             index === currentIndex ? styles.activeSlide : ""
           }`}
         >
-          <Image
-            src={image}
+          <ResponsiveImage
+            desktopSrc={image.desktop}
+            mobileSrc={image.mobile}
             alt={`Слайд ${index + 1}`}
-            className={styles.image}
-            priority={index === 0}
             width={2560}
             height={1440}
+            className={styles.image}
+            priority={index === 0}
           />
         </div>
       ))}
@@ -71,23 +62,28 @@ export const Hero = () => {
               с повышенной опасностью.
             </p>
           </div>
-        </div>
-        <ul className={styles.list}>
-          {item.map((item, index) => (
-            <li
-              className={`${styles.item} ${
-                index === currentIndex ? styles.activeItem : ""
-              }`}
-              key={index}
-            >
-              <span
-                className={styles.progress}
+          <ul className={styles.list}>
+            {items.map((item, index) => (
+              <li
+                className={`${styles.item} ${
+                  index === currentIndex ? styles.activeItem : ""
+                }`}
+                key={index}
                 style={{ animationDuration: `${slideDuration}ms` }}
-              ></span>
-              {item}
-            </li>
-          ))}
-        </ul>
+              >
+                <span
+                  className={styles.progress}
+                  style={{ animationDuration: `${slideDuration}ms` }}
+                ></span>
+
+                {/* Проверка на рендер компонента и его наличие */}
+                {item.icon && <item.icon className={styles.icon} />}
+
+                <span className={styles.itemText}>{item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import Link from "next/link";
 import classNames from "classnames";
 import { LogoProps, LogoType } from "./Logo.props";
@@ -8,7 +7,7 @@ import LogoSkImage from "./images/logo-sk.svg";
 import LogoKtImage from "./images/logo-kt.svg";
 import styles from "./Logo.module.css";
 
-export const Logo = ({ type }: LogoProps): JSX.Element => {
+export const Logo = ({ type }: LogoProps) => {
   const selectionLogo = (type: LogoType) => {
     switch (type) {
       case LogoType.PRIMARY:

@@ -54,12 +54,6 @@
   height: 100%;
 }
 
-.container::before {
-  content: "";
-  display: block;
-  height: 150px;
-}
-
 .text {
   position: absolute;
   top: 30vh;
@@ -135,6 +129,10 @@
   animation: progress-bar linear;
 }
 
+.icon {
+  display: none;
+}
+
 @media screen and (min-width: 1921px) {
   .item {
     font-size: 18px;
@@ -148,7 +146,33 @@
 }
 
 @media screen and (max-width: 1279px) {
+  .hero {
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 95%;
+    padding-bottom: 30px;
+  }
+
+  .container::before {
+    content: "";
+    display: block;
+    height: 133px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   .text {
+    position: static;
     gap: 20px;
     max-width: 693px;
   }
@@ -158,22 +182,91 @@
   }
 
   .subtitle {
-    margin: 0;
     font-size: 22px;
   }
 
   .list {
-    gap: 10px;
-    font-size: calc(0.5vw + 6px);
+    position: static;
+
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+
+    font-size: 16px;
+    color: var(--color-primary);
   }
 
   .item {
-    height: 64px;
-    padding: 10px 5px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    height: auto;
+    padding: 0;
+
+    background: transparent;
   }
 
   .activeItem {
-    height: 115px;
+    animation: move-to-center linear;
+  }
+
+  .progress {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .container::before {
+    content: "";
+    display: block;
+    height: 110px;
+  }
+
+  .content {
+    gap: 40px;
+  }
+
+  .text {
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .list {
+    gap: 15px;
+    align-self: center;
+  }
+
+  .item {
+    gap: 10px;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .activeItem {
+    animation: scale linear;
+  }
+
+  .itemText {
+    flex: 1;
   }
 }
 
@@ -184,5 +277,45 @@
 
   to {
     width: 100%;
+  }
+}
+
+@keyframes move-to-center {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  7% {
+    transform: translateX(calc(50vw - 50%)) scale(1);
+  }
+
+  10% {
+    transform: translateX(calc(50vw - 50%)) scale(1.3);
+  }
+
+  98% {
+    transform: translateX(calc(50vw - 50%)) scale(1.3);
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  7% {
+    transform: scale(1.15);
+  }
+
+  98% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

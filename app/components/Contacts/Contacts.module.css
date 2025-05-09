@@ -76,3 +76,15 @@
     height: 28px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .list {
+    gap: 30px;
+    justify-content: end;
+  }
+
+  .item:has(.image) {
+    width: 35px;
+    height: 35px;
+  }
+}

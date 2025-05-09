@@ -46,3 +46,13 @@
     width: 95%;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 0;
+  }
+
+  .logoRow {
+    margin-bottom: 20px;
+  }
+}

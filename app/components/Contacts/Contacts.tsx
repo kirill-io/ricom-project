@@ -2,8 +2,10 @@ import Link from "next/link";
 import styles from "./Contacts.module.css";
 import WhatsappImage from "./images/whatsapp-icon.svg";
 import TelegramImage from "./images/telegram-icon.svg";
+import PhoneImage from "./images/phone-icon.svg";
+import { ContactsProps } from "./Contact.props";
 
-export const Contacts = () => {
+export const Contacts = ({ phoneIcon }: ContactsProps) => {
   return (
     <ul className={styles.list}>
       <li className={styles.item}>
@@ -26,7 +28,11 @@ export const Contacts = () => {
       </li>
       <li className={styles.item}>
         <Link className={styles.link} href="tel:+78005052898" target="_blank">
-          +7 800 505-28-98
+          {phoneIcon ? (
+            <PhoneImage className={styles.image} />
+          ) : (
+            <>+7 800 505-28-98</>
+          )}
         </Link>
       </li>
     </ul>

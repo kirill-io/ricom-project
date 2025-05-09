@@ -24,7 +24,6 @@ export const Hero = () => {
   }, []);
 
   if (!isMounted) {
-    // На сервере ничего не рендерим — предотвращаем ошибку
     return null;
   }
 

@@ -1,3 +1,5 @@
+import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
+
 export enum LogoType {
   PRIMARY = "primary",
   SECONDARY = "secondary",
@@ -5,6 +7,11 @@ export enum LogoType {
   KUZTECH = "kuztech",
 }
 
-export interface LogoProps {
+export interface LogoProps
+  extends DetailedHTMLProps<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
   type: LogoType;
+  className?: string;
 }

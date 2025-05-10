@@ -8,24 +8,20 @@ import { Contacts } from "../Contacts/Contacts";
 import { MOBILE_BREAKPOINT } from "./constants";
 
 export const Header = () => {
-  const [isMounted, setIsMounted] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
-    setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-
-    const handleResize = () => {
+    if (typeof window !== "undefined") {
       setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-    };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+      };
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <header className={styles.header}>

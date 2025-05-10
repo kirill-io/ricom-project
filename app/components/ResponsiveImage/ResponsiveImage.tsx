@@ -12,6 +12,7 @@ export const ResponsiveImage = ({
   height,
   className,
   priority = false,
+  ...props
 }: ResponsiveImageProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -47,6 +48,7 @@ export const ResponsiveImage = ({
       height={height}
       className={className}
       priority={priority}
+      {...props}
     />
   );
 };

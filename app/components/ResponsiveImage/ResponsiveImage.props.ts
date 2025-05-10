@@ -1,11 +1,6 @@
-import { StaticImageData } from "next/image";
+import { ImageProps, StaticImageData } from "next/image";
 
-export interface ResponsiveImageProps {
+export interface ResponsiveImageProps extends Omit<ImageProps, "src"> {
   desktopSrc: StaticImageData;
   mobileSrc: StaticImageData;
-  alt: string;
-  width: number;
-  height: number;
-  className?: string;
-  priority?: boolean;
 }

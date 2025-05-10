@@ -1,2 +1,1 @@
-export const TABLET_BREAKPOINT = 1279;
-export const MOBILE_BREAKPOINT = 767;
+export const SLIDE_DURATION = 7000;

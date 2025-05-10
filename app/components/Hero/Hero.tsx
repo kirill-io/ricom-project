@@ -1,31 +1,23 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { images, items } from "./Hero.data";
 import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
+import { SLIDE_DURATION } from "./constants";
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slideDuration = 7000;
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, slideDuration);
+    }, SLIDE_DURATION);
 
     return () => clearInterval(interval);
   }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <section className={styles.hero}>
@@ -68,16 +60,20 @@ export const Hero = () => {
                   index === currentIndex ? styles.activeItem : ""
                 }`}
                 key={index}
-                style={{ animationDuration: `${slideDuration}ms` }}
+                style={{ animationDuration: `${SLIDE_DURATION}ms` }}
               >
                 <span
                   className={styles.progress}
-                  style={{ animationDuration: `${slideDuration}ms` }}
+                  style={{ animationDuration: `${SLIDE_DURATION}ms` }}
                 ></span>
-
-                {/* Проверка на рендер компонента и его наличие */}
-                {item.icon && <item.icon className={styles.icon} />}
-
+                <Image
+                  src={item.icon}
+                  alt={item.text}
+                  className={styles.icon}
+                  width={40}
+                  height={40}
+                  priority
+                />
                 <span className={styles.itemText}>{item.text}</span>
               </li>
             ))}

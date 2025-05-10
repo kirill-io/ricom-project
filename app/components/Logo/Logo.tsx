@@ -1,10 +1,8 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 import { LogoProps, LogoType } from "./Logo.props";
-import LogoPrimaryImage from "./images/logo-primary.svg";
-import LogoSecondaryImage from "./images/logo-secondary.svg";
-import LogoSkImage from "./images/logo-sk.svg";
-import LogoKtImage from "./images/logo-kt.svg";
 import styles from "./Logo.module.css";
 
 export const Logo = ({ type }: LogoProps) => {
@@ -13,13 +11,27 @@ export const Logo = ({ type }: LogoProps) => {
       case LogoType.PRIMARY:
         return (
           <Link href="/" className={classNames(styles.link, styles.logo)}>
-            <LogoPrimaryImage className={styles.image} />
+            <Image
+              src={"/images/logo/logo-primary.svg"}
+              alt="Логотип РИКОМ."
+              className={styles.image}
+              width={173}
+              height={35}
+              priority
+            />
           </Link>
         );
       case LogoType.SECONDARY:
         return (
           <Link href="/" className={classNames(styles.link, styles.logo)}>
-            <LogoSecondaryImage className={styles.image} />
+            <Image
+              src={"/images/logo/logo-secondary.svg"}
+              alt="Логотип РИКОМ."
+              className={styles.image}
+              width={173}
+              height={35}
+              priority
+            />
           </Link>
         );
       case LogoType.SKOLKOVO:
@@ -29,7 +41,14 @@ export const Logo = ({ type }: LogoProps) => {
             className={classNames(styles.link, styles.skolkovo)}
             target="_blank"
           >
-            <LogoSkImage className={styles.image} />
+            <Image
+              src={"/images/logo/logo-sk.svg"}
+              alt="Логотип инновационного центра Сколково."
+              className={styles.image}
+              width={126}
+              height={35}
+              priority
+            />
           </Link>
         );
       case LogoType.KUZTECH:
@@ -39,7 +58,14 @@ export const Logo = ({ type }: LogoProps) => {
             className={classNames(styles.link, styles.kuztech)}
             target="_blank"
           >
-            <LogoKtImage className={styles.image} />
+            <Image
+              src={"/images/logo/logo-kt.svg"}
+              alt="Логотип Технопарка КузТех."
+              className={styles.image}
+              width={61}
+              height={35}
+              priority
+            />
           </Link>
         );
       default:

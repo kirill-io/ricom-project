@@ -1,6 +1,7 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Menu.module.css";
-import СartImage from "./images/cart-icon.svg";
 
 export const Menu = () => {
   return (
@@ -38,7 +39,14 @@ export const Menu = () => {
         </li>
         <li className={styles.item}>
           <Link href="" className={styles.link}>
-            <СartImage className={styles.image} />
+            <Image
+              src={"/images/menu/cart-icon.svg"}
+              alt="Иконка корзины – быстрый доступ к оформлению и проверке заказов."
+              className={styles.image}
+              width={43}
+              height={35}
+              priority
+            />
           </Link>
         </li>
       </menu>

@@ -1,8 +1,7 @@
+"use client";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Contacts.module.css";
-import WhatsappImage from "./images/whatsapp-icon.svg";
-import TelegramImage from "./images/telegram-icon.svg";
-import PhoneImage from "./images/phone-icon.svg";
 import { ContactsProps } from "./Contact.props";
 
 export const Contacts = ({ phoneIcon }: ContactsProps) => {
@@ -14,7 +13,14 @@ export const Contacts = ({ phoneIcon }: ContactsProps) => {
           href="https://wa.me/78005052898"
           target="_blank"
         >
-          <WhatsappImage className={styles.image} />
+          <Image
+            src={"/images/contact/whatsapp-icon.svg"}
+            alt="Иконка WhatsApp – нажмите для быстрой связи через мессенджер."
+            className={styles.image}
+            width={30}
+            height={30}
+            priority
+          />
         </Link>
       </li>
       <li className={styles.item}>
@@ -23,13 +29,27 @@ export const Contacts = ({ phoneIcon }: ContactsProps) => {
           href="https://t.me/+78005052898"
           target="_blank"
         >
-          <TelegramImage className={styles.image} />
+          <Image
+            src={"/images/contact/telegram-icon.svg"}
+            alt="Иконка Telegram – нажмите для быстрой связи через мессенджер."
+            className={styles.image}
+            width={30}
+            height={30}
+            priority
+          />
         </Link>
       </li>
       <li className={styles.item}>
         <Link className={styles.link} href="tel:+78005052898" target="_blank">
           {phoneIcon ? (
-            <PhoneImage className={styles.image} />
+            <Image
+              src={"/images/contact/phone-icon.svg"}
+              alt="Иконка телефона – нажмите для быстрого звонка в РИКОМ."
+              className={styles.image}
+              width={30}
+              height={30}
+              priority
+            />
           ) : (
             <>+7 800 505-28-98</>
           )}

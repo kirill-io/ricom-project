@@ -1,7 +1,7 @@
-import { roboto } from "./fonts/fonts";
+import { roboto } from "../fonts/fonts";
 import "./globals.css";
 import { Loader } from "./Loader";
-import { Header } from "./components/Header/Header";
+import { Header } from "../components/Header/Header";
 
 export default function RootLayout({
   children,

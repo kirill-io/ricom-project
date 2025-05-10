@@ -68,7 +68,7 @@ export const Hero = () => {
                 ></span>
                 <Image
                   src={item.icon}
-                  alt={item.text}
+                  alt={item.alt}
                   className={styles.icon}
                   width={40}
                   height={40}

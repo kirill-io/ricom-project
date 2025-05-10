@@ -5,7 +5,18 @@ import classNames from "classnames";
 import { LogoProps, LogoType } from "./Logo.props";
 import styles from "./Logo.module.css";
 
-const logos = {
+const logos: Record<
+  LogoType,
+  {
+    href: string;
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    className: string;
+    target?: string;
+  }
+> = {
   [LogoType.PRIMARY]: {
     href: "/",
     src: "/images/logo/logo-primary.svg",
@@ -44,7 +55,7 @@ const logos = {
   },
 };
 
-export const Logo = ({ type }: LogoProps) => {
+export const Logo = ({ type, ...props }: LogoProps) => {
   const logo = logos[type];
 
   return (
@@ -53,6 +64,7 @@ export const Logo = ({ type }: LogoProps) => {
       className={classNames(styles.link, logo.className)}
       target={logo.target}
       rel={logo.target ? "noopener noreferrer" : undefined}
+      {...props}
     >
       <Image
         src={logo.src}

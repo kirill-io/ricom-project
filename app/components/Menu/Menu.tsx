@@ -5,7 +5,7 @@ import styles from "./Menu.module.css";
 
 export const Menu = () => {
   return (
-    <div className={styles.menu}>
+    <nav className={styles.menu}>
       <menu className={styles.list}>
         <li className={styles.item}>
           <Link href="" className={styles.link}>
@@ -50,6 +50,6 @@ export const Menu = () => {
           </Link>
         </li>
       </menu>
-    </div>
+    </nav>
   );
 };

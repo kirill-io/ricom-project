@@ -4,9 +4,9 @@ import Image from "next/image";
 import styles from "./Contacts.module.css";
 import { ContactsProps } from "./Contact.props";
 
-export const Contacts = ({ phoneIcon }: ContactsProps) => {
+export const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} {...props}>
       <li className={styles.item}>
         <Link
           className={styles.link}
@@ -40,7 +40,7 @@ export const Contacts = ({ phoneIcon }: ContactsProps) => {
         </Link>
       </li>
       <li className={styles.item}>
-        <Link className={styles.link} href="tel:+78005052898" target="_blank">
+        <Link className={styles.link} href="tel:+78005052898">
           {phoneIcon ? (
             <Image
               src={"/images/contact/phone-icon.svg"}

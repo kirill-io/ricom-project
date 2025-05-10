@@ -1,6 +1,15 @@
-"use client";
+import { Metadata } from "next";
 import { Hero } from "./components/Hero/Hero";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
+  description:
+    "Безопасное освещение от РИКОМ: рудничная взрывозащищённая лента RSD-Ex для промышленных зон. Сертифицировано, надёжно, готово к эксплуатации.",
+  authors: [{ name: "РИКОМ" }],
+  creator: "РИКОМ",
+  publisher: "РИКОМ",
+};
 
 export default function Home() {
   return (

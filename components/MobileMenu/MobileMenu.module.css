@@ -16,6 +16,12 @@
   transition: all 0.3s;
 }
 
+.open {
+  position: fixed;
+  top: 15px;
+  right: 18px;
+}
+
 .line {
   width: 25px;
   height: 3px;
@@ -109,8 +115,9 @@
 
 .mobileMenu menu li:last-child {
   position: absolute;
-  top: 98%;
-  left: 60%;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .logo {

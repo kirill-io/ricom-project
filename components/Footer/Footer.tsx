@@ -18,60 +18,60 @@ export const Footer = () => {
           </p>
         </div>
         <div className={styles.row}>
-          <ul className={styles.contacts}>
-            <li className={styles.item}>ООО «РИКОМ»</li>
-            <li className={styles.itemAdress}>
+          <address className={styles.adress}>
+            <span className={styles.adressRow}>ООО «РИКОМ»</span>
+            <span className={styles.adressText}>
               650002, Кемеровская область, г Кемерово,
               <br />
               б-р Имени Академика Л.С. Барбараша,
               <br />
               зд. 1, помещ. 208
-            </li>
-            <li className={styles.item}>Пн – Пт, с 10:00 до 19:00 (МСК)</li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="tel:+78005052898"
-                aria-label="Позвонить в РИКОМ по номеру +7 800 505-28-98"
-              >
-                +7 800 505-28-98
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link
-                className={styles.link}
-                href="mailto:test@example.com"
-                aria-label="Отправить письмо на электронную почту test@example.com"
-              >
-                test@example.com
-              </Link>
-            </li>
-          </ul>
-          <div className={styles.socialLink}>
+            </span>
+            <span className={styles.adressRow}>
+              Пн – Пт, с 10:00 до 19:00 (МСК)
+            </span>
+            <Link
+              className={styles.link}
+              href="tel:+78005052898"
+              aria-label="Позвонить в РИКОМ по номеру +7 800 505-28-98"
+            >
+              +7 800 505-28-98
+            </Link>
+            <Link
+              className={styles.link}
+              href="mailto:test@example.com"
+              aria-label="Отправить письмо на электронную почту test@example.com"
+            >
+              test@example.com
+            </Link>
+          </address>
+          <nav className={styles.socialLink} aria-label="Социальные сети">
             <SocialLink />
-          </div>
+          </nav>
         </div>
         <div className={styles.row}>
-          <ul className={styles.legalLinks}>
-            <li className={styles.legalItem}>
-              <Link
-                className={styles.link}
-                href="/privacy-policy"
-                aria-label="Открыть Политику конфиденциальности компании РИКОМ"
-              >
-                Политика конфиденциальности
-              </Link>
-            </li>
-            <li className={styles.legalItem}>
-              <Link
-                className={styles.link}
-                href="/user-agreement"
-                aria-label="Открыть Пользовательское соглашение компании РИКОМ"
-              >
-                Пользовательское соглашение
-              </Link>
-            </li>
-          </ul>
+          <nav className={styles.legal} aria-label="Юридическая информация">
+            <ul className={styles.legalLinks}>
+              <li className={styles.legalItem}>
+                <Link
+                  className={styles.link}
+                  href="/privacy-policy"
+                  aria-label="Открыть Политику конфиденциальности компании РИКОМ"
+                >
+                  Политика конфиденциальности
+                </Link>
+              </li>
+              <li className={styles.legalItem}>
+                <Link
+                  className={styles.link}
+                  href="/user-agreement"
+                  aria-label="Открыть Пользовательское соглашение компании РИКОМ"
+                >
+                  Пользовательское соглашение
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div className={styles.row}>
           <p className={styles.copyright}>© 2025 ООО «РИКОМ»</p>

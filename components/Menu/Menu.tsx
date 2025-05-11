@@ -65,6 +65,15 @@ export const Menu = ({ className, ...props }: MenuProps) => {
         </li>
         <li className={styles.item}>
           <Link
+            href="/contacts"
+            className={styles.link}
+            aria-label="Перейти на страницу контактов компании"
+          >
+            Контакты
+          </Link>
+        </li>
+        <li className={styles.item}>
+          <Link
             href="/cart"
             className={styles.link}
             aria-label="Перейти в корзину для проверки и оформления заказов"

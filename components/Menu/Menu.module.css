@@ -11,7 +11,7 @@
 
 .list {
   display: flex;
-  gap: 50px;
+  gap: 35px;
   justify-content: center;
 
   margin: 0;

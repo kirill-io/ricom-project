@@ -9,10 +9,10 @@ body {
   flex-direction: column;
   align-items: center;
 
-  height: 3000px;
   margin: 0;
 
   font-family: var(--font-roboto), "Open Sans", sans-serif;
+  line-height: 1.5;
 
   background: var(--color-secondary);
 }

@@ -10,6 +10,12 @@ import desktop5 from "./images/slide-5.jpg";
 import mobile5 from "./images/slide-5-mobile.jpg";
 import desktop6 from "./images/slide-6.jpg";
 import mobile6 from "./images/slide-6-mobile.jpg";
+import Item1Icon from "./images/item-1-icon.svg";
+import Item2Icon from "./images/item-2-icon.svg";
+import Item3Icon from "./images/item-3-icon.svg";
+import Item4Icon from "./images/item-4-icon.svg";
+import Item5Icon from "./images/item-5-icon.svg";
+import Item6Icon from "./images/item-6-icon.svg";
 
 export const images = [
   {
@@ -40,33 +46,27 @@ export const images = [
 
 export const items = [
   {
-    icon: "/images/hero/item-1-icon.svg",
+    icon: Item1Icon,
     text: "Взрывозащищённость",
-    alt: "Иконка взрывозащищённости – безопасное освещение в зонах повышенной опасности.",
   },
   {
-    icon: "/images/hero/item-2-icon.svg",
+    icon: Item2Icon,
     text: "Применение в опасных зонах",
-    alt: "Иконка применения в опасных зонах – использование на промышленных объектах высокой опасности.",
   },
   {
-    icon: "/images/hero/item-3-icon.svg",
+    icon: Item3Icon,
     text: "Высокая степень защиты",
-    alt: "Иконка высокой степени защиты – максимальная защита от пыли и влаги IP68.",
   },
   {
-    icon: "/images/hero/item-4-icon.svg",
+    icon: Item4Icon,
     text: "Температурный диапазон",
-    alt: "Иконка температурного диапазона – устойчивость к экстремальным температурам от -40°C до +40°C.",
   },
   {
-    icon: "/images/hero/item-5-icon.svg",
+    icon: Item5Icon,
     text: "Энергоэффективность",
-    alt: "Иконка энергоэффективности – снижение потребления энергии без потери яркости.",
   },
   {
-    icon: "/images/hero/item-6-icon.svg",
+    icon: Item6Icon,
     text: "Долговечность",
-    alt: "Иконка долговечности – повышенный срок службы даже в суровых условиях эксплуатации.",
   },
 ];

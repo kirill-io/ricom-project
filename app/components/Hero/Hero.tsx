@@ -1,12 +1,11 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { images, items } from "./Hero.data";
 import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
 import { SLIDE_DURATION } from "./constants";
-import { Button } from "../Button/Button";
-import { ButtonVariant } from "../Button/Button.props";
+import { Button } from "../../../components/Button/Button";
+import { ButtonVariant } from "../../../components/Button/Button.props";
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -75,14 +74,7 @@ export const Hero = () => {
                   className={styles.progress}
                   style={{ animationDuration: `${SLIDE_DURATION}ms` }}
                 ></span>
-                <Image
-                  src={item.icon}
-                  alt={item.alt}
-                  className={styles.icon}
-                  width={40}
-                  height={40}
-                  priority
-                />
+                {item.icon && <item.icon className={styles.icon} />}
                 <span className={styles.itemText}>{item.text}</span>
               </li>
             ))}

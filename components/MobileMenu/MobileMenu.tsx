@@ -24,6 +24,8 @@ export const MobileMenu = () => {
           [styles.open]: isOpen === true,
         })}
         onClick={toggleMenu}
+        aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
+        aria-expanded={isOpen}
       >
         <span className={styles.line} />
         <span className={styles.line} />

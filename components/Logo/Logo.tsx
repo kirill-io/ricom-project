@@ -64,6 +64,11 @@ export const Logo = ({ type, ...props }: LogoProps) => {
       className={classNames(styles.link, logo.className)}
       target={logo.target}
       rel={logo.target ? "noopener noreferrer" : undefined}
+      aria-label={
+        logo.target
+          ? `Перейти на сайт ${logo.alt.replace("Логотип ", "")}`
+          : "Перейти на главную страницу"
+      }
       {...props}
     >
       <Image

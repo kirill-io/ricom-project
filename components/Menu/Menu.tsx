@@ -10,37 +10,65 @@ export const Menu = ({ className, ...props }: MenuProps) => {
     <nav className={classNames(styles.menu, className)} {...props}>
       <menu className={styles.list}>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="."
+            className={styles.link}
+            aria-label="Перейти на главную страницу"
+          >
             Главная
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="/technology"
+            className={styles.link}
+            aria-label="Узнать о технологии"
+          >
             О Технологии
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="/projects"
+            className={styles.link}
+            aria-label="Просмотреть реализованные проекты"
+          >
             Наши Проекты
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="/catalog"
+            className={styles.link}
+            aria-label="Перейти в каталог товаров"
+          >
             Каталог
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="/documentation"
+            className={styles.link}
+            aria-label="Открыть документацию"
+          >
             Документация
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="/blog"
+            className={styles.link}
+            aria-label="Читать блог компании"
+          >
             Блог
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href="" className={styles.link}>
+          <Link
+            href="/cart"
+            className={styles.link}
+            aria-label="Перейти в корзину для проверки и оформления заказов"
+          >
             <Image
               src={"/images/menu/cart-icon.svg"}
               alt="Иконка корзины – быстрый доступ к оформлению и проверке заказов."

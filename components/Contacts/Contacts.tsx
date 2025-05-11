@@ -12,6 +12,8 @@ export const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
           className={styles.link}
           href="https://wa.me/78005052898"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Написать в WhatsApp"
         >
           <Image
             src={"/images/contact/whatsapp-icon.svg"}
@@ -28,6 +30,8 @@ export const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
           className={styles.link}
           href="https://t.me/+78005052898"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Написать в Telegram"
         >
           <Image
             src={"/images/contact/telegram-icon.svg"}
@@ -40,7 +44,11 @@ export const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
         </Link>
       </li>
       <li className={styles.item}>
-        <Link className={styles.link} href="tel:+78005052898">
+        <Link
+          className={styles.link}
+          href="tel:+78005052898"
+          aria-label="Позвонить в РИКОМ по номеру +7 800 505-28-98"
+        >
           {phoneIcon ? (
             <Image
               src={"/images/contact/phone-icon.svg"}

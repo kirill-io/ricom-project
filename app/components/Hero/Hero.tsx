@@ -21,13 +21,17 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className={styles.hero}>
+    <section
+      className={styles.hero}
+      aria-label="Главная секция — Светодиодное освещение для взрывоопасных производств"
+    >
       {images.map((image, index) => (
         <div
           key={index}
           className={`${styles.slide} ${
             index === currentIndex ? styles.activeSlide : ""
           }`}
+          aria-hidden={index !== currentIndex}
         >
           <ResponsiveImage
             desktopSrc={image.desktop}
@@ -44,12 +48,18 @@ export const Hero = () => {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.text}>
-            <h1 className={styles.title}>
+            <h1
+              className={styles.title}
+              aria-label="Основной заголовок: Светодиодное освещение для взрывоопасных производств"
+            >
               Светодиодное освещение
               <br />
               для взрывоопасных производств
             </h1>
-            <p className={styles.subtitle}>
+            <p
+              className={styles.subtitle}
+              aria-label="Подзаголовок: Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах с повышенной опасностью."
+            >
               Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах
               с повышенной опасностью.
             </p>
@@ -57,11 +67,15 @@ export const Hero = () => {
               variant={ButtonVariant.PRIMARY}
               className={styles.button}
               type="button"
+              aria-label="Оставить заявку на светодиодное освещение RSD-Ex"
             >
               Оставить заявку
             </Button>
           </div>
-          <ul className={styles.list}>
+          <ul
+            className={styles.list}
+            aria-label="Преимущества светодиодной ленты RSD-Ex"
+          >
             {items.map((item, index) => (
               <li
                 className={`${styles.item} ${

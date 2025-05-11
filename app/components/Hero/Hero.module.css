@@ -221,7 +221,7 @@
 
   .button {
     align-self: center;
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
   }
 
@@ -340,7 +340,7 @@
     transform: translateX(-50%) scale(1.3);
   }
 
-  98% {
+  96% {
     left: 50%;
     transform: translateX(-50%) scale(1.3);
   }

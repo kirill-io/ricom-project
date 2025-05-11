@@ -46,3 +46,10 @@
       0 0 0 5px var(--color-tertiary) inset;
   }
 }
+
+@media screen and (max-width: 1279px) {
+  .button {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}

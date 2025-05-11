@@ -82,9 +82,4 @@
     gap: 30px;
     justify-content: end;
   }
-
-  .item:has(.image) {
-    width: 35px;
-    height: 35px;
-  }
 }

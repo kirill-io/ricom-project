@@ -268,18 +268,18 @@
 
 @media screen and (max-width: 767px) {
   .container {
-    gap: 20px;
+    gap: 15px;
     padding-bottom: 20px;
   }
 
   .container::before {
     content: "";
     display: block;
-    height: 110px;
+    height: 98px;
   }
 
   .content {
-    gap: 40px;
+    gap: 25px;
   }
 
   .text {
@@ -287,22 +287,22 @@
   }
 
   .title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .subtitle {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .list {
     gap: 15px;
     align-self: center;
+    width: 85%;
   }
 
   .item {
     gap: 10px;
     width: 100%;
-    padding: 0 15px;
   }
 
   .activeItem {
@@ -311,6 +311,11 @@
 
   .itemText {
     flex: 1;
+  }
+
+  .activeItem .icon {
+    width: 40px;
+    height: 40px;
   }
 }
 

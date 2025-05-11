@@ -205,8 +205,8 @@
   .text {
     position: static;
     gap: 20px;
-    max-width: 693px;
     align-self: center;
+    max-width: 693px;
   }
 
   .title {
@@ -221,8 +221,8 @@
 
   .button {
     align-self: center;
-    max-width: 400px;
     width: 100%;
+    max-width: 400px;
   }
 
   .list {
@@ -238,12 +238,15 @@
 
   .item {
     position: relative;
-    align-items: center;
-    height: auto;
-    padding: 0;
-    background: transparent;
+
     flex-direction: row;
     gap: 20px;
+    align-items: center;
+
+    height: auto;
+    padding: 0;
+
+    background: transparent;
   }
 
   .activeItem {
@@ -296,21 +299,19 @@
 
   .list {
     gap: 15px;
+    align-items: center;
     align-self: center;
+
     width: 85%;
+    max-width: 315px;
   }
 
   .item {
     gap: 10px;
-    width: 100%;
   }
 
   .activeItem {
     animation: scale linear;
-  }
-
-  .itemText {
-    flex: 1;
   }
 
   .activeItem .icon {

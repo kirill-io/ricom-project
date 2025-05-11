@@ -1,1 +1,1 @@
-export const SLIDE_DURATION = 7000;
+export const SLIDE_DURATION = 5000;

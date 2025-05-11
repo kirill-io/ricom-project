@@ -93,3 +93,9 @@
     height: 30px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .item:has(.image) {
+    position: static;
+  }
+}

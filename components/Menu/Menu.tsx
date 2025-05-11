@@ -2,10 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Menu.module.css";
+import classNames from "classnames";
+import { MenuProps } from "./Menu.props";
 
-export const Menu = () => {
+export const Menu = ({ className, ...props }: MenuProps) => {
   return (
-    <nav className={styles.menu}>
+    <nav className={classNames(styles.menu, className)} {...props}>
       <menu className={styles.list}>
         <li className={styles.item}>
           <Link href="" className={styles.link}>

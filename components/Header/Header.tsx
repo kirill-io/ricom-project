@@ -6,6 +6,7 @@ import { LogoType } from "../Logo/Logo.props";
 import { Menu } from "../Menu/Menu";
 import { Contacts } from "../Contacts/Contacts";
 import { MOBILE_BREAKPOINT } from "./constants";
+import { MobileMenu } from "../MobileMenu/MobileMenu";
 
 export const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,6 +35,7 @@ export const Header = () => {
               <Logo type={LogoType.SKOLKOVO} />
             </div>
           )}
+          {isMobile && <MobileMenu />}
         </div>
         <div className={styles.menuRow}>{!isMobile && <Menu />}</div>
         <div className={styles.contactsRow}>

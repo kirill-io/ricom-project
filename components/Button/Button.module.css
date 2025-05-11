@@ -19,31 +19,35 @@
   color: var(--color-secondary);
   background: var(--color-primary);
   box-shadow: 0 0 0 2.5px var(--color-primary) inset,
-    0 0 0 5px var(--color-primary) inset;
+    0 0 0 5px var(--color-primary) inset, 0 0 6px 2px rgb(255 255 255 / 50%);
   transition: box-shadow 0.3s ease;
 }
 
 @media (hover: hover) {
   .primary:hover {
     box-shadow: 0 0 0 2.5px var(--color-primary) inset,
-      0 0 0 5px var(--color-tertiary) inset;
+      0 0 0 5px var(--color-tertiary) inset,
+      0 0 10px 2px rgb(255 255 255 / 50%);
   }
 
   .primary:focus {
     box-shadow: 0 0 0 2.5px var(--color-primary) inset,
-      0 0 0 5px var(--color-tertiary) inset;
+      0 0 0 5px var(--color-tertiary) inset,
+      0 0 10px 2px rgb(255 255 255 / 50%);
   }
 }
 
 @media (hover: none) {
   .primary:active {
     box-shadow: 0 0 0 2.5px var(--color-primary) inset,
-      0 0 0 5px var(--color-tertiary) inset;
+      0 0 0 5px var(--color-tertiary) inset,
+      0 0 10px 2px rgb(255 255 255 / 50%);
   }
 
   .primary:focus {
     box-shadow: 0 0 0 2.5px var(--color-primary) inset,
-      0 0 0 5px var(--color-tertiary) inset;
+      0 0 0 5px var(--color-tertiary) inset,
+      0 0 10px 2px rgb(255 255 255 / 50%);
   }
 }
 

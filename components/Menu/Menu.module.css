@@ -82,8 +82,8 @@
 
 @media screen and (max-width: 1279px) {
   .list {
-    gap: 25px;
-    font-size: 16px;
+    gap: 20px;
+    font-size: 14px;
   }
 
   .item:has(.image) {
@@ -95,6 +95,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .list {
+    font-size: 16px;
+  }
+
   .item:has(.image) {
     position: static;
   }

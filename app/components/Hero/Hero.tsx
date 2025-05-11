@@ -5,6 +5,8 @@ import styles from "./Hero.module.css";
 import { images, items } from "./Hero.data";
 import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
 import { SLIDE_DURATION } from "./constants";
+import { Button } from "../Button/Button";
+import { ButtonVariant } from "../Button/Button.props";
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,6 +54,13 @@ export const Hero = () => {
               Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах
               с повышенной опасностью.
             </p>
+            <Button
+              variant={ButtonVariant.PRIMARY}
+              className={styles.button}
+              type="button"
+            >
+              Оставить заявку
+            </Button>
           </div>
           <ul className={styles.list}>
             {items.map((item, index) => (

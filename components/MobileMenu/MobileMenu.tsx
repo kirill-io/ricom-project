@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./MobileMenu.module.css";
 import { Menu } from "../Menu/Menu";
 import classNames from "classnames";
@@ -8,6 +9,7 @@ import { LogoType } from "../Logo/Logo.props";
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,6 +18,10 @@ export const MobileMenu = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
 
   return (
     <>

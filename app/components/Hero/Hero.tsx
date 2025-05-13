@@ -6,6 +6,9 @@ import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
 import { SLIDE_DURATION } from "./constants";
 import { Button } from "../../../components/Button/Button";
 import { ButtonVariant } from "../../../components/Button/Button.props";
+import Title from "@/components/Title/Title";
+import Subtitle from "@/components/Subtitle/Subtitle";
+import Container from "@/components/Container/Container";
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,24 +48,25 @@ export const Hero = () => {
         </div>
       ))}
       <div className={styles.overlay} />
-      <div className={styles.container}>
+      <Container className={styles.container}>
         <div className={styles.content}>
           <div className={styles.text}>
-            <h1
+            <Title
+              type="h1"
               className={styles.title}
               aria-label="Основной заголовок: Светодиодное освещение для взрывоопасных производств"
             >
               Светодиодное освещение
               <br />
               для взрывоопасных производств
-            </h1>
-            <p
+            </Title>
+            <Subtitle
               className={styles.subtitle}
               aria-label="Подзаголовок: Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах с повышенной опасностью."
             >
               Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах
               с повышенной опасностью.
-            </p>
+            </Subtitle>
             <Button
               variant={ButtonVariant.PRIMARY}
               className={styles.button}
@@ -94,7 +98,7 @@ export const Hero = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

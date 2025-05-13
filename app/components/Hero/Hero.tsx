@@ -60,10 +60,7 @@ export const Hero = () => {
               <br />
               для взрывоопасных производств
             </Title>
-            <Subtitle
-              className={styles.subtitle}
-              aria-label="Подзаголовок: Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах с повышенной опасностью."
-            >
+            <Subtitle className={styles.subtitle}>
               Сертифицированная лента RSD-Ex для безопасной эксплуатации в зонах
               с повышенной опасностью.
             </Subtitle>

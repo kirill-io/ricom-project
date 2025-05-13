@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Hero } from "./components/Hero/Hero";
 import styles from "./page.module.css";
+import Features from "./components/Features/Features";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <Hero />
+      <Features />
     </main>
   );
 }

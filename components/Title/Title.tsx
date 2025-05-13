@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes } from "react";
 import classNames from "classnames";
 import styles from "./Title.module.css";
 

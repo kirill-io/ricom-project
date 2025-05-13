@@ -14,19 +14,15 @@ export const ResponsiveImage = ({
   priority = false,
   ...props
 }: ResponsiveImageProps) => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT
+  );
 
   useEffect(() => {
-    setIsMounted(true);
-
     const handleResize = () => {
-      if (typeof window !== "undefined") {
-        setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-      }
+      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
     };
 
-    handleResize();
     window.addEventListener("resize", handleResize);
     window.addEventListener("orientationchange", handleResize);
 
@@ -35,10 +31,6 @@ export const ResponsiveImage = ({
       window.removeEventListener("orientationchange", handleResize);
     };
   }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <Image

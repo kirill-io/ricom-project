@@ -1,8 +1,10 @@
 .subtitle {
   margin: 0;
+
   font-family: var(--font-roboto), "Open Sans", sans-serif;
   font-size: 24px;
   font-weight: normal;
+  color: var(--color-primary);
 }
 
 @media screen and (max-width: 1279px) {

@@ -2,60 +2,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
-import { LogoProps, LogoType } from "./Logo.props";
+import { LogoType } from "./LogoTypes";
 import styles from "./Logo.module.css";
+import { AnchorHTMLAttributes, DetailedHTMLProps, FC } from "react";
+import { logos } from "./LogoData";
 
-const logos: Record<
-  LogoType,
-  {
-    href: string;
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-    className: string;
-    target?: string;
-  }
-> = {
-  [LogoType.PRIMARY]: {
-    href: "/",
-    src: "/images/logo/logo-primary.svg",
-    alt: "Логотип РИКОМ.",
-    width: 173,
-    height: 35,
-    className: styles.logo,
-    target: undefined,
-  },
-  [LogoType.SECONDARY]: {
-    href: "/",
-    src: "/images/logo/logo-secondary.svg",
-    alt: "Логотип РИКОМ.",
-    width: 173,
-    height: 35,
-    className: styles.logo,
-    target: undefined,
-  },
-  [LogoType.SKOLKOVO]: {
-    href: "https://www.sk.ru/",
-    src: "/images/logo/logo-sk.svg",
-    alt: "Логотип инновационного центра Сколково.",
-    width: 126,
-    height: 35,
-    className: styles.skolkovo,
-    target: "_blank",
-  },
-  [LogoType.KUZTECH]: {
-    href: "https://technopark42.ru/",
-    src: "/images/logo/logo-kt.svg",
-    alt: "Логотип Технопарка КузТех.",
-    width: 61,
-    height: 35,
-    className: styles.kuztech,
-    target: "_blank",
-  },
-};
+interface LogoProps
+  extends DetailedHTMLProps<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  > {
+  type: LogoType;
+  className?: string;
+}
 
-export const Logo = ({ type, ...props }: LogoProps) => {
+const Logo: FC<LogoProps> = ({ type, ...props }) => {
   const logo = logos[type];
 
   return (
@@ -82,3 +43,5 @@ export const Logo = ({ type, ...props }: LogoProps) => {
     </Link>
   );
 };
+
+export default Logo;

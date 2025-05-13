@@ -1,16 +1,20 @@
 "use client";
-import { useEffect, useState } from "react";
+import { FC, HTMLAttributes, useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 import { images, items } from "./Hero.data";
-import { ResponsiveImage } from "../ResponsiveImage/ResponsiveImage";
+import ResponsiveImage from "../ResponsiveImage/ResponsiveImage";
 import { SLIDE_DURATION } from "./constants";
-import { Button } from "../../../components/Button/Button";
-import { ButtonVariant } from "../../../components/Button/Button.props";
+import Button from "../../../components/Button/Button";
+import { ButtonVariant } from "../../../components/Button/ButtonTypes";
 import Title from "@/components/Title/Title";
 import Subtitle from "@/components/Subtitle/Subtitle";
 import Container from "@/components/Container/Container";
 
-export const Hero = () => {
+interface HeroProps extends HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
+
+const Hero: FC<HeroProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -99,3 +103,5 @@ export const Hero = () => {
     </section>
   );
 };
+
+export default Hero;

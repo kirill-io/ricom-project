@@ -1,11 +1,16 @@
 "use client";
 import Link from "next/link";
-import { Logo } from "../Logo/Logo";
-import { LogoType } from "../Logo/Logo.props";
+import Logo from "../Logo/Logo";
+import { LogoType } from "../Logo/LogoTypes";
 import styles from "./Footer.module.css";
-import { SocialLink } from "../SocialLink/SocialLink";
+import SocialLink from "../SocialLink/SocialLink";
+import { FC, HTMLAttributes } from "react";
 
-export const Footer = () => {
+interface FooterProps extends HTMLAttributes<HTMLElement> {
+  className?: string;
+}
+
+const Footer: FC<FooterProps> = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -80,3 +85,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

@@ -3,9 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Menu.module.css";
 import classNames from "classnames";
-import { MenuProps } from "./Menu.props";
+import { FC, HTMLAttributes } from "react";
 
-export const Menu = ({ className, ...props }: MenuProps) => {
+interface MenuProps extends HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
+
+const Menu: FC<MenuProps> = ({ className, ...props }) => {
   return (
     <nav className={classNames(styles.menu, className)} {...props}>
       <menu className={styles.list}>
@@ -92,3 +96,5 @@ export const Menu = ({ className, ...props }: MenuProps) => {
     </nav>
   );
 };
+
+export default Menu;

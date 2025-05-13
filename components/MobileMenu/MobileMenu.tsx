@@ -1,13 +1,17 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, HTMLAttributes, FC } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./MobileMenu.module.css";
-import { Menu } from "../Menu/Menu";
+import Menu from "../Menu/Menu";
 import classNames from "classnames";
-import { Logo } from "../Logo/Logo";
-import { LogoType } from "../Logo/Logo.props";
+import Logo from "../Logo/Logo";
+import { LogoType } from "../Logo/LogoTypes";
 
-export const MobileMenu = () => {
+interface MobileMenuProps extends HTMLAttributes<HTMLDivElement> {
+  className?: string;
+}
+
+const MobileMenu: FC<MobileMenuProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -53,3 +57,5 @@ export const MobileMenu = () => {
     </>
   );
 };
+
+export default MobileMenu;

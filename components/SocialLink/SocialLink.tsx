@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./SocialLink.module.css";
+import { FC, HTMLAttributes } from "react";
 
-export const SocialLink = () => {
+interface SocialLinkProps extends HTMLAttributes<HTMLUListElement> {
+  className?: string;
+}
+
+const SocialLink: FC<SocialLinkProps> = () => {
   return (
     <ul className={styles.socialLink}>
       <li>
@@ -76,3 +81,5 @@ export const SocialLink = () => {
     </ul>
   );
 };
+
+export default SocialLink;

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { Hero } from "./components/Hero/Hero";
-import styles from "./page.module.css";
+import Hero from "./components/Hero/Hero";
 import Features from "./components/Features/Features";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",

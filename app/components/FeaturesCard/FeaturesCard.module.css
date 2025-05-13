@@ -42,7 +42,7 @@
 }
 
 @media (hover: none) {
-  .featuresCard:hover {
+  .featuresCard:active {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 0 0 2.5px var(--color-primary) inset,
       0 0 0 5px var(--color-primary) inset, 0 0 10px 2px rgb(255 255 255 / 50%);
@@ -114,6 +114,22 @@
   .description {
     font-size: 15px;
   }
+
+  @media (hover: hover) {
+    .featuresCard:hover {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 0 2.5px var(--color-primary) inset,
+        0 0 0 5px var(--color-primary) inset, 0 0 6px 2px rgb(255 255 255 / 50%);
+    }
+  }
+
+  @media (hover: none) {
+    .featuresCard:active {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 0 2.5px var(--color-primary) inset,
+        0 0 0 5px var(--color-primary) inset, 0 0 6px 2px rgb(255 255 255 / 50%);
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -124,5 +140,10 @@
   .featuresCard:nth-child(4),
   .featuresCard:nth-child(5) {
     flex: 1 0 100%;
+  }
+
+  .imageWrap {
+    max-width: 60px;
+    max-height: 60px;
   }
 }

@@ -1,14 +1,18 @@
 "use client";
-import { useEffect, useState } from "react";
+import { FC, HTMLAttributes, useEffect, useState } from "react";
 import styles from "./Header.module.css";
-import { Logo } from "../Logo/Logo";
-import { LogoType } from "../Logo/Logo.props";
-import { Menu } from "../Menu/Menu";
-import { Contacts } from "../Contacts/Contacts";
+import Logo from "../Logo/Logo";
+import { LogoType } from "../Logo/LogoTypes";
+import Menu from "../Menu/Menu";
+import Contacts from "../Contacts/Contacts";
 import { MOBILE_BREAKPOINT } from "./constants";
-import { MobileMenu } from "../MobileMenu/MobileMenu";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
-export const Header = () => {
+interface HeaderProps extends HTMLAttributes<HTMLElement> {
+  className?: string;
+}
+
+const Header: FC<HeaderProps> = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -45,3 +49,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

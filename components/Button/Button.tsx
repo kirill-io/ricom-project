@@ -1,8 +1,14 @@
 import classNames from "classnames";
 import styles from "./Button.module.css";
-import { ButtonProps, ButtonVariant } from "./Button.props";
+import { ButtonHTMLAttributes, FC } from "react";
+import { ButtonVariant } from "./ButtonTypes";
 
-export const Button = ({
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant: ButtonVariant;
+  className?: string;
+}
+
+const Button: FC<ButtonProps> = ({
   variant,
   className,
   children,
@@ -20,3 +26,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;

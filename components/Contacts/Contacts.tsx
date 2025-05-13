@@ -2,9 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Contacts.module.css";
-import { ContactsProps } from "./Contact.props";
+import { HTMLAttributes } from "react";
 
-export const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
+interface ContactsProps extends HTMLAttributes<HTMLUListElement> {
+  phoneIcon: boolean;
+}
+
+const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
   return (
     <ul className={styles.list} {...props}>
       <li className={styles.item}>
@@ -66,3 +70,5 @@ export const Contacts = ({ phoneIcon, ...props }: ContactsProps) => {
     </ul>
   );
 };
+
+export default Contacts;

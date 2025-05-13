@@ -1,10 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { ResponsiveImageProps } from "./ResponsiveImage.props";
+import Image, { ImageProps, StaticImageData } from "next/image";
 import { MOBILE_BREAKPOINT } from "./constants";
 
-export const ResponsiveImage = ({
+interface ResponsiveImageProps extends Omit<ImageProps, "src"> {
+  desktopSrc: StaticImageData;
+  mobileSrc: StaticImageData;
+}
+
+const ResponsiveImage = ({
   desktopSrc,
   mobileSrc,
   alt,
@@ -44,3 +48,5 @@ export const ResponsiveImage = ({
     />
   );
 };
+
+export default ResponsiveImage;

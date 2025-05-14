@@ -10,7 +10,7 @@ import Title from "@/components/Title/Title";
 import Subtitle from "@/components/Subtitle/Subtitle";
 import Container from "@/components/Container/Container";
 
-interface HeroProps extends HTMLAttributes<HTMLDivElement> {
+interface HeroProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 

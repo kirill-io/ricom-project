@@ -8,7 +8,7 @@ import Subtitle from "@/components/Subtitle/Subtitle";
 import { FeaturesCard } from "../FeaturesCard/FeaturesCard";
 import { featuresData } from "./FeaturesData";
 
-interface FeaturesProps extends HTMLAttributes<HTMLDivElement> {
+interface FeaturesProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 

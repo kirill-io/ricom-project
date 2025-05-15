@@ -22,7 +22,7 @@ export const FeaturesCard: FC<FeaturesCardProps> = ({
   description,
   ...props
 }) => {
-  const ref = useScrollAnimation(styles.visible);
+  const ref = useScrollAnimation<HTMLLIElement>(styles.visible);
 
   return (
     <li

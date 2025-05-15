@@ -1,8 +1,12 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 
-const useScrollAnimation = (className: string) => {
-  const ref = useRef<HTMLLIElement>(null);
+function useGenericRef<T extends HTMLElement>(): RefObject<T> {
+  return useRef<T>(null) as RefObject<T>;
+}
+
+const useScrollAnimation = <T extends HTMLElement>(className: string) => {
+  const ref = useGenericRef<T>();
 
   useEffect(() => {
     const observer = new IntersectionObserver(

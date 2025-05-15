@@ -50,49 +50,6 @@
   gap: 40px;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.line {
-  flex-direction: row;
-  align-items: center;
-}
-
-.rowTitle {
-  margin: 0;
-  font-size: 24px;
-}
-
-.line .rowTitle {
-  width: 100%;
-  max-width: 270px;
-}
-
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.line .list {
-  justify-content: start;
-}
-
-.item {
-  padding: 5px 10px;
-  border: 2px solid var(--color-tertiary);
-  border-radius: 5px;
-}
-
 @media screen and (max-width: 1279px) {
   .technicalSpecifications {
     font-size: 18px;

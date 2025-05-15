@@ -1,5 +1,5 @@
 "use client";
-import { HTMLAttributes } from "react";
+import { FC, HTMLAttributes } from "react";
 import styles from "./TechnicalSpecificationsItem.module.css";
 import classNames from "classnames";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
@@ -12,13 +12,13 @@ interface TechnicalSpecificationsItemProps
   line: boolean;
 }
 
-const TechnicalSpecificationsItem = ({
+const TechnicalSpecificationsItem: FC<TechnicalSpecificationsItemProps> = ({
   className,
   title,
   list,
   line,
   ...props
-}: TechnicalSpecificationsItemProps) => {
+}) => {
   const ref = useScrollAnimation<HTMLDivElement>(styles.visible);
 
   return (

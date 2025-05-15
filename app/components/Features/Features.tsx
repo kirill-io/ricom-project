@@ -22,7 +22,7 @@ const Features: FC<FeaturesProps> = ({ className, ...props }) => {
             className={styles.title}
             aria-label="Основные преимущества RSD-Ex"
           >
-            ОСНОВНЫЕ ПРЕИМУЩЕСТВА RSD-Ex
+            ОСНОВНЫЕ ПРЕИМУЩЕСТВА ленты RSD-Ex
           </Title>
           <Subtitle className={styles.subtitle}>
             Инновационные решения для безопасного и эффективного освещения

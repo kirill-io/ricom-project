@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import Image, { ImageProps, StaticImageData } from "next/image";
 import { MOBILE_BREAKPOINT } from "./constants";
 
@@ -8,7 +8,7 @@ interface ResponsiveImageProps extends Omit<ImageProps, "src"> {
   mobileSrc: StaticImageData;
 }
 
-const ResponsiveImage = ({
+const ResponsiveImage: FC<ResponsiveImageProps> = ({
   desktopSrc,
   mobileSrc,
   alt,
@@ -17,7 +17,7 @@ const ResponsiveImage = ({
   className,
   priority = false,
   ...props
-}: ResponsiveImageProps) => {
+}) => {
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT
   );

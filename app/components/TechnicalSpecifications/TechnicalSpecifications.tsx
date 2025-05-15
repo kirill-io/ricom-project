@@ -26,7 +26,7 @@ const TechnicalSpecifications: FC<TechnicalSpecificationsProps> = ({
           <div className={styles.imageContainer}>
             <Image
               src={"/images/technicalSpecifications/led.jpg"}
-              alt="Технические характеристики – выключено."
+              alt="Светодиодная лента RSD-Ex с ярким холодным белым свечением в защитной оболочке, уложенная в кольцо на металлической поверхности."
               className={styles.image}
               width={620}
               height={295}

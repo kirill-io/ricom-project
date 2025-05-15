@@ -89,7 +89,6 @@
 @media screen and (max-width: 767px) {
   .container {
     gap: 20px;
-    padding: 30px 0;
   }
 
   .imageWrap {

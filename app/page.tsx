@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Features from "./components/Features/Features";
 import styles from "./page.module.css";
 import TechnicalSpecifications from "./components/TechnicalSpecifications/TechnicalSpecifications";
+import { ConstructionFeatures } from "./components/ConstructionFeatures/ConstructionFeatures";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Features />
       <TechnicalSpecifications />
+      <ConstructionFeatures />
     </main>
   );
 }

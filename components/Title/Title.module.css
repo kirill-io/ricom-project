@@ -2,20 +2,43 @@
   margin: 0;
 
   font-family: var(--font-roboto), "Open Sans", sans-serif;
-  font-size: 40px;
   font-weight: bold;
   color: var(--color-primary);
   text-transform: uppercase;
 }
 
+.big {
+  font-size: 40px;
+}
+
+.normal {
+  font-size: 30px;
+}
+
+.small {
+  font-size: 24px;
+}
+
 @media screen and (max-width: 1279px) {
-  .title {
+  .big {
     font-size: 34px;
+  }
+
+  .normal {
+    font-size: 28px;
+  }
+
+  .small {
+    font-size: 22px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .title {
+  .big {
+    font-size: 26px;
+  }
+
+  .normal {
     font-size: 26px;
   }
 }

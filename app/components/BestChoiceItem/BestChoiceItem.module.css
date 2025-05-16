@@ -1,0 +1,22 @@
+.bestChoiceItem {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.image {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 1279px) {
+  .bestChoiceItem {
+    gap: 15px;
+  }
+}

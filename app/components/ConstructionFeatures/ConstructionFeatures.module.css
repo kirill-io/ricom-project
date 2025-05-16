@@ -12,6 +12,12 @@
   padding: 60px 0;
 }
 
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .subtitle {
   max-width: 780px;
 }

@@ -10,11 +10,19 @@ interface BestChoiceItemProps extends HTMLAttributes<HTMLLIElement> {
   children: string;
 }
 
-const BestChoiceItem: FC<BestChoiceItemProps> = ({ className, children }) => {
+const BestChoiceItem: FC<BestChoiceItemProps> = ({
+  className,
+  children,
+  ...props
+}) => {
   const ref = useScrollAnimation<HTMLLIElement>(styles.visible);
 
   return (
-    <li className={classNames(styles.bestChoiceItem, className)} ref={ref}>
+    <li
+      className={classNames(styles.bestChoiceItem, className)}
+      ref={ref}
+      {...props}
+    >
       <Image
         src="/images/bestChoiceItem/led-icon.svg"
         alt="Иконка SMD светодиода с четырьмя выводами, выполненная в минималистичном синем стиле."

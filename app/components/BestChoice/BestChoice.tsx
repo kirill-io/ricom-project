@@ -13,9 +13,9 @@ interface BestChoiceProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-const BestChoice: FC<BestChoiceProps> = ({ className }) => {
+const BestChoice: FC<BestChoiceProps> = ({ className, ...props }) => {
   return (
-    <section className={classNames(styles.bestChoice, className)}>
+    <section className={classNames(styles.bestChoice, className)} {...props}>
       <Container className={styles.container}>
         <div className={styles.textWrap}>
           <Title

@@ -25,18 +25,19 @@ export const ConstructionFeatures: FC<ConstructionFeaturesProps> = ({
   return (
     <section className={classNames(styles.constructionFeatures, className)}>
       <Container className={styles.container}>
-        <Title
-          type="h2"
-          className={styles.title}
-          aria-label="Конструктивные особенности ленты RSD-Ex"
-        >
-          Конструктивные особенности ленты RSD-Ex
-        </Title>
-        <Subtitle className={styles.subtitle}>
-          Подробное устройство ленты RSD-Ex, обеспечивающее надежность,
-          безопасность и долговечность при эксплуатации в опасных зонах.
-        </Subtitle>
-
+        <div className={styles.titleWrap}>
+          <Title
+            type="h2"
+            className={styles.title}
+            aria-label="Конструктивные особенности ленты RSD-Ex"
+          >
+            Конструктивные особенности ленты RSD-Ex
+          </Title>
+          <Subtitle className={styles.subtitle}>
+            Подробное устройство ленты RSD-Ex, обеспечивающее надежность,
+            безопасность и долговечность при эксплуатации в опасных зонах.
+          </Subtitle>
+        </div>
         <div className={styles.imageWrap}>
           <div
             className={classNames(

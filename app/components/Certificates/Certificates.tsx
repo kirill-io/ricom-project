@@ -71,6 +71,7 @@ const Certificates: FC<CertificatesProps> = ({ className, ...props }) => {
         index={selectedIndex}
         on={{ view: ({ index }) => setSelectedIndex(index) }}
         plugins={[Zoom]}
+        controller={{ closeOnBackdropClick: true }}
         styles={{
           container: {
             backgroundColor: "rgba(0, 0, 0, 0.7)",

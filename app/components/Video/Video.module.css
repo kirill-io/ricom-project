@@ -1,0 +1,56 @@
+.video {
+  display: flex;
+  justify-content: center;
+
+  font-family: var(--font-roboto), "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--color-primary);
+
+  background: #344045;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.videoWrap {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.videoPlayer {
+  width: calc(50% - 20px);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1279px) {
+  .container {
+    gap: 40px;
+    padding: 30px 0;
+  }
+
+  .videoWrap {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 20px;
+  }
+
+  .videoWrap {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .videoPlayer {
+    width: 100%;
+  }
+}

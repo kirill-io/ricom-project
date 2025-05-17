@@ -1,6 +1,6 @@
 "use client";
-import { FC, HTMLAttributes, useState } from "react";
-import Image from "next/image";
+import { FC, HTMLAttributes, useState, useEffect } from "react";
+import NextImage from "next/image";
 import styles from "./Certificates.module.css";
 import classNames from "classnames";
 import Container from "@/components/Container/Container";
@@ -17,6 +17,13 @@ interface CertificatesProps extends HTMLAttributes<HTMLElement> {
 const Certificates: FC<CertificatesProps> = ({ className, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
+
+  useEffect(() => {
+    certificates.forEach((certificate) => {
+      const img = new window.Image();
+      img.src = certificate.src;
+    });
+  }, []);
 
   const handleOpenModal = (index: number) => {
     setSelectedIndex(index);
@@ -40,13 +47,14 @@ const Certificates: FC<CertificatesProps> = ({ className, ...props }) => {
               className={styles.card}
               onClick={() => handleOpenModal(i)}
             >
-              <Image
+              <NextImage
                 src={certificate.src}
                 alt={certificate.alt}
                 width={200}
                 height={280}
                 className={styles.image}
                 quality={90}
+                loading="eager"
               />
             </div>
           ))}

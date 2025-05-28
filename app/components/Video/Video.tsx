@@ -9,7 +9,7 @@ interface VideoProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-const Video: FC<VideoProps> = ({ className, ...props }: VideoProps) => {
+const Video: FC<VideoProps> = ({ className, ...props }) => {
   return (
     <section className={classNames(styles.video, className)} {...props}>
       <Container className={styles.container}>

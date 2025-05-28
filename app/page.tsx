@@ -8,6 +8,7 @@ import BestChoice from "./components/BestChoice/BestChoice";
 import Certificates from "./components/Certificates/Certificates";
 import Video from "./components/Video/Video";
 import { Application } from "./components/Application/Application";
+import { Projects } from "./components/Projects/Projects";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
@@ -29,6 +30,7 @@ export default function Home() {
       <Certificates />
       <Video />
       <Application />
+      <Projects />
     </main>
   );
 }

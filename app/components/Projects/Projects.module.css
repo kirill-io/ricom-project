@@ -1,0 +1,47 @@
+.projects {
+  display: flex;
+  justify-content: center;
+
+  font-family: var(--font-roboto), "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--color-primary);
+
+  background: #344045;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.list {
+  display: flex;
+  gap: 45px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .container {
+    gap: 40px;
+    padding: 30px 0;
+  }
+
+  .list {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 20px;
+  }
+}

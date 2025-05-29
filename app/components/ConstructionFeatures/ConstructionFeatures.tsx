@@ -13,7 +13,7 @@ interface ConstructionFeaturesProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export const ConstructionFeatures: FC<ConstructionFeaturesProps> = ({
+const ConstructionFeatures: FC<ConstructionFeaturesProps> = ({
   className,
 }: ConstructionFeaturesProps) => {
   const leftImageRef = useScrollAnimation<HTMLDivElement>(styles.visibleLeft);
@@ -104,3 +104,5 @@ export const ConstructionFeatures: FC<ConstructionFeaturesProps> = ({
     </section>
   );
 };
+
+export default ConstructionFeatures;

@@ -3,12 +3,13 @@ import Hero from "./components/Hero/Hero";
 import Features from "./components/Features/Features";
 import styles from "./page.module.css";
 import TechnicalSpecifications from "./components/TechnicalSpecifications/TechnicalSpecifications";
-import { ConstructionFeatures } from "./components/ConstructionFeatures/ConstructionFeatures";
+import ConstructionFeatures from "./components/ConstructionFeatures/ConstructionFeatures";
 import BestChoice from "./components/BestChoice/BestChoice";
 import Certificates from "./components/Certificates/Certificates";
 import Video from "./components/Video/Video";
-import { Application } from "./components/Application/Application";
-import { Projects } from "./components/Projects/Projects";
+import Application from "./components/Application/Application";
+import Projects from "./components/Projects/Projects";
+import Letters from "./components/Letters/Letters";
 
 export const metadata: Metadata = {
   title: "РИКОМ – рудничная взрывозащищённая светодиодная лента RSD-Ex",
@@ -31,6 +32,7 @@ export default function Home() {
       <Video />
       <Application />
       <Projects />
+      <Letters />
     </main>
   );
 }

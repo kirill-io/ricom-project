@@ -11,7 +11,7 @@ interface ProjectsProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export const Projects: FC<ProjectsProps> = ({ className, ...props }) => {
+const Projects: FC<ProjectsProps> = ({ className, ...props }) => {
   return (
     <section className={classNames(styles.projects, className)} {...props}>
       <Container className={styles.container}>
@@ -37,3 +37,5 @@ export const Projects: FC<ProjectsProps> = ({ className, ...props }) => {
     </section>
   );
 };
+
+export default Projects;

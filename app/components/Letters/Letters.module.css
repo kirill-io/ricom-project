@@ -1,0 +1,80 @@
+.letters {
+  display: flex;
+  justify-content: center;
+
+  font-family: var(--font-roboto), "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--color-primary);
+
+  background: #344045;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.imageWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1279px) {
+  .container {
+    gap: 40px;
+    padding: 30px 0;
+  }
+
+  .image {
+    width: 150px;
+    height: 210px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    gap: 20px;
+  }
+
+  .imageWrap {
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-start;
+
+    -ms-overflow-style: none;
+  }
+
+  .imageWrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 150px;
+    height: 210px;
+  }
+}

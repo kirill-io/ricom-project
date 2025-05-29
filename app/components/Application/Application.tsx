@@ -12,7 +12,7 @@ interface ApplicationProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-export const Application: FC<ApplicationProps> = ({ className, ...props }) => {
+const Application: FC<ApplicationProps> = ({ className, ...props }) => {
   return (
     <section className={classNames(styles.application, className)} {...props}>
       <Container className={styles.container}>
@@ -47,3 +47,5 @@ export const Application: FC<ApplicationProps> = ({ className, ...props }) => {
     </section>
   );
 };
+
+export default Application;

@@ -21,7 +21,7 @@ export const technicalSpecificationsData = [
   },
   {
     title: "Цветовая температура:",
-    list: ["4500K - 5500K"],
+    list: ["4500K - 10000K"],
     line: true,
   },
   {

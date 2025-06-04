@@ -6,7 +6,6 @@ import TechnicalSpecifications from "./components/TechnicalSpecifications/Techni
 import ConstructionFeatures from "./components/ConstructionFeatures/ConstructionFeatures";
 import BestChoice from "./components/BestChoice/BestChoice";
 import Certificates from "./components/Certificates/Certificates";
-import Video from "./components/Video/Video";
 import Application from "./components/Application/Application";
 
 export const metadata: Metadata = {
@@ -27,7 +26,6 @@ export default function Home() {
       <ConstructionFeatures />
       <BestChoice />
       <Certificates />
-      <Video />
       <Application />
     </main>
   );

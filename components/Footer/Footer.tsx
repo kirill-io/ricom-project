@@ -47,7 +47,7 @@ const Footer: FC<FooterProps> = () => {
               href="mailto:test@example.com"
               aria-label="Отправить письмо на электронную почту test@example.com"
             >
-              test@example.com
+              ap@ricompany.ru
             </Link>
           </address>
           <nav className={styles.socialLink} aria-label="Социальные сети">

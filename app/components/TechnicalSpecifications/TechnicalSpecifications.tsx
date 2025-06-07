@@ -15,7 +15,7 @@ interface TechnicalSpecificationsProps extends HTMLAttributes<HTMLElement> {
 const TechnicalSpecifications: FC<TechnicalSpecificationsProps> = ({
   className,
   ...props
-}: TechnicalSpecificationsProps) => {
+}) => {
   return (
     <section
       className={classNames(styles.technicalSpecifications, className)}

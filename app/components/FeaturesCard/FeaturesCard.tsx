@@ -14,7 +14,7 @@ interface FeaturesCardProps extends HTMLAttributes<HTMLLIElement> {
   description: string;
 }
 
-export const FeaturesCard: FC<FeaturesCardProps> = ({
+const FeaturesCard: FC<FeaturesCardProps> = ({
   className,
   icon,
   title,
@@ -46,3 +46,5 @@ export const FeaturesCard: FC<FeaturesCardProps> = ({
     </li>
   );
 };
+
+export default FeaturesCard;

@@ -5,7 +5,7 @@ import styles from "./Features.module.css";
 import Container from "@/components/Container/Container";
 import Title from "@/components/Title/Title";
 import Subtitle from "@/components/Subtitle/Subtitle";
-import { FeaturesCard } from "../FeaturesCard/FeaturesCard";
+import FeaturesCard from "../FeaturesCard/FeaturesCard";
 import { featuresData } from "./FeaturesData";
 
 interface FeaturesProps extends HTMLAttributes<HTMLElement> {

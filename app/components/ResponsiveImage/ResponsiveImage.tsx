@@ -18,27 +18,31 @@ const ResponsiveImage: FC<ResponsiveImageProps> = ({
   priority = false,
   ...props
 }) => {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT
-  );
+  const [isClient, setIsClient] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    setIsClient(true);
+
+    const update = () => {
       setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
     };
 
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("orientationchange", handleResize);
+    update();
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("orientationchange", handleResize);
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
     };
   }, []);
 
+  const actualSrc = isClient && isMobile ? mobileSrc : desktopSrc;
+
   return (
     <Image
-      src={isMobile ? mobileSrc : desktopSrc}
+      src={actualSrc}
       alt={alt}
       width={width}
       height={height}
